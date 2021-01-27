@@ -1,0 +1,21 @@
+p {
+    font-size: 30px;
+    display: inline-block;
+}
+
+.genericClass {
+    color: rgb(23, 218, 23);
+    padding: 30px;
+    font-size: 30px;
+    border-radius: 20px;
+    margin-top: 10%;
+    margin-right: 40px;
+    margin-left: 40px;
+    width: 5em;
+}
+.homeBtn {
+    position: relative;
+    float: right;
+    bottom: -500px;
+    left: -20px;
+}
