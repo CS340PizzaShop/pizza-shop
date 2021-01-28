@@ -1,0 +1,78 @@
+/*
+Global styles------------------------------------
+*/
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.loginfield {
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center;
+    background: #ffffff;
+    color: #000000;
+    font-size: 20px;
+}
+
+body {
+    background: #ffd725;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+}
+
+.top {
+    margin-top: 25%;
+}
+
+.orderstatus {
+    margin-bottom: 15px;
+    margin-left: 345px;
+    border-radius: 8px;
+    padding: 5px;
+    margin-right: 200px;
+}
+
+.orderstatustop {
+    margin-top: 60px;
+    margin-bottom: 15px;
+    margin-left: 345px;
+    margin-right: 200px;
+    padding: 5px;
+    border-radius: 8px;   
+    
+}
+
+.inprogress {
+    padding: 5px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #376cff;
+    text-align: center;
+}
+.complete {
+    padding: 5px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #00ff2a;
+    text-align: center;
+    display: block;
+}
+
+.homeBtn {
+    background-color: transparent;
+    border-color: transparent;
+    position: relative;
+    float: right;
+    
+}
+
