@@ -8,4 +8,7 @@ html {
 
 body{
     background-image: url('images/loginBG.svg');
+    background-position: top center;
+    background-size: auto auto;
+    background-repeat: no-repeat;
 }
