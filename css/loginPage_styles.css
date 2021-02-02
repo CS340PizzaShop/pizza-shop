@@ -69,10 +69,8 @@ body {
 }
 
 .homeBtn {
-    background-color: transparent;
-    border-color: transparent;
     position: relative;
     float: right;
-    
+    bottom: -500px;
+    left: -20px;
 }
-
