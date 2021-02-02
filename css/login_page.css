@@ -25,3 +25,29 @@ body{
     margin-bottom: 20px;
     font-size: 20px;
 }
+
+.username_field {
+    text-align: center;
+    margin-top: 45%;
+    position: relative;
+    overflow: hidden;
+}
+
+.password_field {
+    text-align: center;
+    padding-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 750 px) {
+    .username_field {
+        margin-top: 35%;
+    }
+}
+
+@media screen and (max-width: 375 px) {
+    .username_field {
+        margin-top: 37em;
+    }
+}
