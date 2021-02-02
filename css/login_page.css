@@ -1,0 +1,27 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    background-image: url('images/loginBG.svg');
+    background-position: top center;
+    background-size: auto auto;
+    background-repeat: no-repeat;
+}
+.login_field {
+    color: #000000;
+    background: #ffffff;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 8px;
+    width: 25em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
