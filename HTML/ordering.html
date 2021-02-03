@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fatima's Pizzeria - home page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "../CSS/placeOrder_style.css"> <!-- the ../ moves up a folder, then finds the css-->
+    <script src = "script.js" defer></script>  <!--deferring means that JS will be downloaded, but it will not be executed until all the HTML and CSS have been loaded -->
+
+</head>
+
+<body>
+    <input type = "text" name = "customer_name" class = "customer_info top" placeholder = "Customer Name...">
+    <input type = "text" name = "customer_address" class = "customer_info bottom" placeholder = "Customer Address...">
+    <div class = "dropdown">
+        <button class = "customer_info dropbtn">orderType</button>
+        <div class = "dropdown-content">
+        
+        <a href = "https://www.google.com">Google</a>
+        <a href = "https://www.facebook.com">Facebook</a>
+        <a href = "https://www.youtube.com">YouTube</a>
+    </div>
+    </div>
+    <input type = "submit" name = "submit" value = "Submit" class = "customer_info submit_field">
+</body>
+</html>
+<!--http://localhost/pizzaShop/HTML/ordering.html   <-- enter this address into chrome after starting XAMPP Apache and MySQL server-->
