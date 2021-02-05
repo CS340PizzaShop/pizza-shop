@@ -57,13 +57,17 @@ body {
     border-radius: 8px;
     margin-bottom: 15px;
     background-color: #376cff;
+    border-color:#376cff;
     text-align: center;
+    display: block;
 }
 .complete {
+    font-size: 15px;
     padding: 5px;
     border-radius: 8px;
     margin-bottom: 15px;
     background-color: #00ff2a;
+    border-color: #00ff2a;
     text-align: center;
     display: block;
 }
