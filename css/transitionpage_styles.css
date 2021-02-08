@@ -71,6 +71,12 @@ h1 {
     .username_field {
         margin-top: 35%;
     }
+    .generic_btn {
+        text-align: center;
+        padding-top: 20px;
+        position: relative;
+        overflow: hidden;
+    }
 }
 
 @media screen and (max-width: 375px)  /*width of an iphoneX.  Applies to any viewport size under 375px*/
