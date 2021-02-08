@@ -1,0 +1,25 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: bisque;
+    overflow: hidden;
+}
+
+h1 {
+    color:aqua;
+    background: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 50px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    border: 5px solid;
+    width: 25em;
+}
