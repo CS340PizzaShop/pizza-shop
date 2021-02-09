@@ -55,6 +55,6 @@ body {
 .homeBtn {
     position: relative;
     float: right;
-    bottom: -500px;
+    bottom: -200px;
     left: -20px;
 }
