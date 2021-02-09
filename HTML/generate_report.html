@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fatima's Pizzeria - transitional page</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
-    <link rel = "stylesheet" href = "../css/generate_report.css"> <!-- the ../ moves up a folder, then finds the css-->
+    <link rel = "stylesheet" href = "../css/generate_report.CSS"> <!-- the ../ moves up a folder, then finds the css-->
     <script src = "script.js" defer></script>  <!--deferring means that JS will be downloaded, but it will not be executed until all the HTML and CSS have been loaded -->
 
 </head>
 
 <body>
 
+    <h1> FATIMAZ PIZZA REPORTS</h1>
     <p style = "margin-left: 20px;">Enter Date Range</p>
 
     <input type = "date" name = "startDate" class = "genericClass" placeholder = "MM/DD/YYYY">
@@ -23,15 +24,46 @@
 
     <button class = "genericClass" name = "allDates">All</button>
 
-    <section>
+
+    <section class = "orderTypes">
         <p>Enter Orders:</p>
+
+        <label class = "input_field">Delivery
+            <input type ="checkbox" name = "orderType[]" value = "delivery"> <!--https://www.w3schools.com/howto/howto_css_custom_checkbox.asp-->
+        </label>
+        
+        <label class = "input_field">Dine-in
+            <input type ="checkbox"  name = "orderType[]" value = "dinein"> <!--placing [] after the name signifies that it is an array object, allowing us to use the foreach in the php-->
+        </label>
+
+        <label class = "input_field">Takeout
+            <input type ="checkbox" name = "orderType[]" value = "takeout">
+        </label>
     </section>
 
+<<<<<<< Updated upstream
     <a href = "transition_page.html" class = "homeBtn">
             <img src = "../css/images/homeBtn.svg" class = "" alt = "home button">
+=======
+    <input type = "submit" value = "submit">
+
+
+    <a class="input_field generic_btn" style = "background: #DE9E37" href="transitional_page.html">Generate</a>   <!--TODO:does this need to run a python script that downloads the graph to the computer, or does it need to link to another page that shows the results?r-->
+</form>
+
+<a href = "transitional_page.html" class = "home_btn"> 
+    <img src = "../css/images/homeBtn.svg" alt = "home button">
+</a>
+
+</body> 
+
+</html>
+    <a href = "hello.html" class = "homeBtn">
+            <img src = "homeBtn.svg" class = "" alt = "home button">
+>>>>>>> Stashed changes
     </a>
 
-    <!--  start Apache and MySQL in XAMPP control panel, then follow this link   http://localhost/pizza-shop/HTML/generateReport.html     -->
+    <!--  start Apache and MySQL in XAMPP control panel, then follow this link   http://localhost/pizza-shop/HTML/generate_report.html     -->
 
 
 </body>
