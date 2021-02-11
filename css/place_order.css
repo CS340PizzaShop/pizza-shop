@@ -11,20 +11,33 @@ html {   /* box fix */
 }
 
 body {
-    background-image: url('images/call.jpg');
+    background: #ffd725;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: auto auto;
 }
 
-.customer_info {
+h1 {
+    color: #328E00;
+    background: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 50px;
+    margin: auto;
     padding: 20px;
+    border-radius: 20px;
+    border: 5px solid;
+    width: 25em;
+}
+
+.customer_info {
+    padding: 12px;
     margin-left: auto;
     margin-right: auto;
     display: block;
     margin-bottom: 20px;
     border-radius: 8px;
-    text-align: center;
+    text-align: left;
     font-size: 20px;
 }
 
@@ -41,11 +54,12 @@ body {
 }
 
 .dropbtn {
-    background-color: black;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
+    background-color: white;
+    color: black;
+    width: 270px;
+    padding: 15px;
+    position: relative;
+    bottom: +430px;
 }
 
 .dropdown {
@@ -56,7 +70,8 @@ body {
     display: none;
     position: relative;
     background-color: lightgrey;
-    min-width: 160px;
+    min-width: 80px;
+    bottom: +450px;
     z-index: 1;
 }
 
@@ -67,6 +82,40 @@ body {
     display: block;
 }
 
+.twodropbtn {
+    background-color: white;
+    color: black;
+    width: 270px;
+    padding: 15px;
+    position: relative;
+    bottom: +630px;
+}
+
+.sndDropdown {
+    position: relative;
+}
+
+.dropdown-contenttwo {
+    display: none; 
+    position: relative;
+    background-color: lightgrey;
+    min-width: 80px;
+    bottom: +630px;
+    z-index: 1;
+}
+
+.dropdown-contenttwo a {
+    color: black;
+    padding: 15px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+
 .dropdown-content a:hover {background-color: white;}
 .dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {background-color: grey;}  
+.dropdown:hover .dropbtn {background-color: grey;}
+
+.dropdown-contenttwo a:hover {background-color: white;}
+.sndDropdown:hover .dropdown-contenttwo {display: block;}
+.sndDropdown:hover .twodropbtn {background-color: grey;}
