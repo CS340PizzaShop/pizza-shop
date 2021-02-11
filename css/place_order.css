@@ -42,7 +42,7 @@ h1 {
 }
 
 .top {
-    margin-top: 30%;
+    margin-top: 30%;        /*FIXME:  This is partially causing your odd spacing issue I think.  Same with .bottom class.  Remember, you can use ctrl+shift+i to use inpector on the the actual webpage.  then you can quickly and individually remove CSS elements and see which ones are causing your spacing issues*/
 }
 
 .bottom {
@@ -59,7 +59,7 @@ h1 {
     width: 270px;
     padding: 15px;
     position: relative;
-    bottom: +430px;
+    bottom: +430px; /*FIXME: these spacings are odd and are causing issues.  Perhaps remove them and try a different approach.  usually,in best practice, giant px vals like this should be avoided */
 }
 
 .dropdown {
@@ -71,7 +71,7 @@ h1 {
     position: relative;
     background-color: lightgrey;
     min-width: 80px;
-    bottom: +450px;
+    bottom: +450px; /*FIXME: these spacings are odd and are causing issues.  Perhaps remove them and try a different approach.  usually,in best practice, giant px vals like this should be avoided */
     z-index: 1;
 }
 
@@ -91,7 +91,7 @@ h1 {
     bottom: +630px;
 }
 
-.sndDropdown {
+.sndDropdown { /*FIXME:  this is a duplicate class*/
     position: relative;
 }
 
@@ -100,11 +100,11 @@ h1 {
     position: relative;
     background-color: lightgrey;
     min-width: 80px;
-    bottom: +630px;
+    bottom: +630px;/*FIXME: these spacings are odd and are causing issues.  Perhaps remove them and try a different approach.  usually,in best practice, giant px vals like this should be avoided */
     z-index: 1;
 }
 
-.dropdown-contenttwo a {
+.dropdown-contenttwo a {    /*FIXME:  Classes can be reused.  Delete duplicate classes and convert your html to use just one.  Then in your daily scrum, make sure you mentioned that you refactored*/
     color: black;
     padding: 15px 15px;
     text-decoration: none;
@@ -112,7 +112,7 @@ h1 {
 }
 
 
-.dropdown-content a:hover {background-color: white;}
+.dropdown-content a:hover {background-color: white;} /*TODO: Nice use of cool animation stuff like hover! We need to make sure this works in mobile webpage at some point if you decide to keep this*/
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: grey;}
 

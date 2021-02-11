@@ -18,14 +18,14 @@
     <input type = "text" name = "customer_address" class = "customer_info bottom" placeholder = "Customer Address...">
     
 
-    <div class = "dropdown">
+    <div class = "dropdown">        <!--FIXME: Make sure to use proper indentation, as seen here as opposed to lines 37-46.  improves readability.  also, if possible, don't use div tags to wrap everything.  usually there is a better way.-->
         <button class = "customer_info dropbtn">Choose Order Type...</button>
         <div class = "dropdown-content">
         
-        <a href = "https://www.google.com">Google</a>
-        <a href = "https://www.facebook.com">Facebook</a>
-        <a href = "https://www.youtube.com">YouTube</a>
-    </div>
+            <a href = "https://www.google.com">Google</a>       <!--FIXME: It would be better to use a list her (<ul> and <li> tags) if you decided to go this route.  Even better than that may be to use the input dropdown field.  It would simplify much of this.-->
+            <a href = "https://www.facebook.com">Facebook</a>
+            <a href = "https://www.youtube.com">YouTube</a>
+        </div>
     </div>
 
     <input type = "submit" name = "submit" value = "Submit" class = "customer_info submit_field">
@@ -34,7 +34,8 @@
         <img src = "../css/images/homeBtn.svg" class = "" alt = "home button"> 
     </a>
 
-    <div class = "sndDropdown">
+    <div class = "sndDropdown">         <!--FIXME:  Is this class as dropdown?  We improve efficiency and readability by reusing classes.
+                                                    In the CSS file, if both classes have the exact same content, delete one and use the othe for any HTML tag that needs it.-->
         <button class = "customer_info twodropbtn">Choose Topping...</button>
         <div class = "dropdown-contenttwo">
 
