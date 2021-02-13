@@ -14,16 +14,18 @@
 <body>
 
     <h1> Generate Report</h1> <!--TODO:  Add css margin spacing so that the date field doesn't squash against the text-->
-    <p style = "margin-left: 20px; margin-bottom: 20;">Enter Date Range</p>
+    <p style = "margin-left: 20px; padding-bottom: 20px; margin-top:5%;">Enter Date Range:</p>
 
-    <input type = "date" name = "startDate" class = "genericClass" placeholder = "MM/DD/YYYY"> <!--TODO:format the date input with CSS-->
+    <input type = "date" name = "startDate" class = "genericClass" placeholder = "MM/DD/YYYY" style = " display :inline-block;"  > <!--TODO:format the date input with CSS-->
 
-    <p>to</p>   <!--TODO:  Add css margin spacing so that the date field doesn't squash against the text-->
+    <p style = "display:inline-block ">to</p>   <!--TODO:  Add css margin spacing so that the date field doesn't squash against the text-->
 
-    <input type = "date" name = "endDate" class = "genericClass" placeholder = "MM/DD/YYYY"> <!--TODO:format the date input with CSS-->
+    <input type = "date" name = "endDate" class = "genericClass" placeholder = "MM/DD/YYYY" style = "display:inline-block "> <!--TODO:format the date input with CSS-->
 
-    <button class = "genericClass" name = "allDates">All</button> <!--TODO:Format this ot look like the other page elements using CSS-->
+    <button class = "genericClass" name = "allDates" style = "display:inline-block">All</button> <!--TODO:Format this ot look like the other page elements using CSS-->
+<style> 
 
+</style>
 
     <section class = "orderTypes">
         <p>Enter Orders:</p>
@@ -40,6 +42,10 @@
             <input type ="checkbox" name = "orderType[]" value = "takeout">
         </label>
     </section>
+
+    <input type = "submit" value = "submit">
+
+    <a class="input_field generic_btn" style = "background: #DE9E37; margin-top: 100px; text-align: center;" href="transitional_page.html">Generate</a>
 
     <a href = "transition_page.html" class = "homeBtn"> <!--TODO:Move home button lower right corner of screen using CSS to keep uniformity with the other pages.-->
             <img src = "../css/images/homeBtn.svg" class = "" alt = "home button">
