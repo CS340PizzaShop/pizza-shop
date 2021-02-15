@@ -41,14 +41,6 @@ h1 {
     font-size: 20px;
 }
 
-.top {
-    margin-top: 30%;        /*FIXME:  This is partially causing your odd spacing issue I think.  Same with .bottom class.  Remember, you can use ctrl+shift+i to use inpector on the the actual webpage.  then you can quickly and individually remove CSS elements and see which ones are causing your spacing issues*/
-}
-
-.bottom {
-    margin-bottom: 30%;
-}
-
 .submit_field {
     padding: 5px;
 }
@@ -59,7 +51,6 @@ h1 {
     width: 270px;
     padding: 15px;
     position: relative;
-    bottom: +430px; /*FIXME: these spacings are odd and are causing issues.  Perhaps remove them and try a different approach.  usually,in best practice, giant px vals like this should be avoided */
 }
 
 .dropdown {
@@ -71,7 +62,6 @@ h1 {
     position: relative;
     background-color: lightgrey;
     min-width: 80px;
-    bottom: +450px; /*FIXME: these spacings are odd and are causing issues.  Perhaps remove them and try a different approach.  usually,in best practice, giant px vals like this should be avoided */
     z-index: 1;
 }
 
@@ -82,29 +72,27 @@ h1 {
     display: block;
 }
 
-.twodropbtn {
+.dropbtn2 {
     background-color: white;
     color: black;
     width: 270px;
     padding: 15px;
     position: relative;
-    bottom: +630px;
 }
 
-.sndDropdown { /*FIXME:  this is a duplicate class*/
+.dropdown2 {
     position: relative;
 }
 
-.dropdown-contenttwo {
-    display: none; 
+.dropdown-content2 {
+    display: none;
     position: relative;
     background-color: lightgrey;
     min-width: 80px;
-    bottom: +630px;/*FIXME: these spacings are odd and are causing issues.  Perhaps remove them and try a different approach.  usually,in best practice, giant px vals like this should be avoided */
     z-index: 1;
 }
 
-.dropdown-contenttwo a {    /*FIXME:  Classes can be reused.  Delete duplicate classes and convert your html to use just one.  Then in your daily scrum, make sure you mentioned that you refactored*/
+.dropdown-content2 a {
     color: black;
     padding: 15px 15px;
     text-decoration: none;
@@ -112,10 +100,12 @@ h1 {
 }
 
 
+
+.dropdown-content2 a:hover {background-color: white;}
+.dropdown2:hover .dropdown-content2 {display: block;}
+.dropdown2:hover .dropbtn2 {background-color: grey;}
+
 .dropdown-content a:hover {background-color: white;} /*TODO: Nice use of cool animation stuff like hover! We need to make sure this works in mobile webpage at some point if you decide to keep this*/
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: grey;}
 
-.dropdown-contenttwo a:hover {background-color: white;}
-.sndDropdown:hover .dropdown-contenttwo {display: block;}
-.sndDropdown:hover .twodropbtn {background-color: grey;}
