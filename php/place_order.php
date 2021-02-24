@@ -47,7 +47,7 @@ if (!empty($customer_name)) {
     }
     else // parse error that needs to be fixed
     {
-        echo = "<script type = 'text/javascript'>alert('Customer Name cannot be empty.'); </script>";
+        echo "<script type = 'text/javascript'>alert('Customer Name cannot be empty.'); </script>";
         header('Refresh: .1; URL=http://localhost/pizza-shop/HTML/place_order.html');
         die();
     }
