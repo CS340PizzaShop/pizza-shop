@@ -18,17 +18,13 @@ if (!empty($customer_name)) {
 
         include "connect.php";
 
-        $cSQL = "SELECT * FROM customer ORDER BY id DESC LIMIT 1";
+        $cSQL = "SELECT FROM customer_name ORDER BY id ASC  1";
         $cresult = $conn->query($cSQL);
         $customerID_fk = $cResult->fetch_array()['id'] ?? '';
-        $customerID_fk++;
 
-        $pSQL = "SELECT * FROM pizza ORDER BY id DESC LIMIT 1";
+        $pSQL = "SELECT FROM pizza_order ORDER BY id ASC  1";
         $presult = $conn->query($pSQL);
         $pizzaID_fk = $pResult->fetch_array()['id'] ?? '';
-        $pizzaID_fk++;
-
-        $query1 = "INSERT INTO customer (First_Name, Last_Name, Address, ZIP) VALUES ('$customer_name', '$customer_name', '$customer_address', '$customer_address')";
         
         if (mysqli_query($conn, $query1))
         {
