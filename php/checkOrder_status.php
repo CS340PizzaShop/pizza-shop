@@ -29,39 +29,39 @@ include "connect.php";
 
             <?php
 
-                $sql = "SELECT * FROM customer INNER JOIN pizza_order ON customer.id = pizza_order.customer_id
-                ORDER BY id DESC";
+                $sql = "SELECT customer FROM customer INNER JOIN pizza FOR customer.id = pizza.customer_id
+                ORDER BY id ASC";
 
             if ($result = mysqli_query($conn, $sql))
             {
-                $count = 0;
-                while ($row = mysqli_fetch_row($result))
+                $count = 1;
+                while ($row = mysqli_fetch_array($result))
                 {
                     if ($count != 8)
                     {
                         $count++;
                 ?>
                     <tr>
-                        <td class = "table_cell"><?php echo $row[2];?></td>
-                        ($row[2]) -->
-                        <td class = "table_cell"><?php echo '(' . $row[5] . ')';?></td>
+                        <td class = "table_cells"><?php echo $row[0];?></td>
+                        ($row[1]) -->
+                        <td class = "table_cells"><?php echo '(' . $row[3] . ')';?></td>
                         [5]) -->
 
                         <?php
-                            if ($row[11] == 1)
+                            if ($row[13] == 1)
                             {
                         ?>        
-                                <td class = "table_cell">
-                                    <button id="statusBtn" style = "background-color: #05FF00;">Completed</button>
+                                <td class = "table_cells">
+                                    <button id="btn" style = "color: #05AA00;">Completed</button>
                                 </td>
                             <?php
                             }
                             else
                             {
                             ?>
-                                <td class  = "table_cell">
-                                    <a href = 'update_fulfilled.php?id=<?php echo $row[5]?>'>
-                                        <button id="statusBtn">In Progress</button>
+                                <td class  = "table_cells">
+                                    <a href = 'update_fulfill.php?id=<?php echo $row[9]?>'>
+                                        <button id="btn">In Progress</button>
                                     </a>
                                 </td>
                             </tr>
