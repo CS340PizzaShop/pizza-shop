@@ -24,7 +24,7 @@ h1 {
 }
 
 body {
-    margin: auto auto;
+    /* margin: auto auto; */
     background: #ffd725;
     background-position: top center;
     background-repeat: no-repeat;
@@ -34,7 +34,7 @@ body {
 .orderID {
     margin-bottom: 15px;
     margin-left: 27.611%;   /* TODO:  We will be able to remediate the margin spacing issues with php.*/
-    margin: auto;
+    /* margin: auto; */
     border-radius: 8px;
     padding: 5px;
     margin-right: 200px;
