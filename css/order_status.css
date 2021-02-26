@@ -52,6 +52,7 @@ body {
 .inprogress {
     padding: 5px;
     border-radius: 8px;
+    margin-left: 27.611%;
     margin-bottom: 15px;
     background-color: #376cff;
     border-color:#376cff;
