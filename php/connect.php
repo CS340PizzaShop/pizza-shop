@@ -2,13 +2,13 @@
 
 $host = "localhost";
 $dbusername = "root";
-$dbpassword = "";
+$dbpassword = "root";
 $dbname = "pizzeriadb";
 
     $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
 
-if (!$conn) {
-    die("Connection failed: " .  mysqli_connect_error());
+if(!$conn) 
+{
+    die("Connection failed: " . mysqli_connect_error());
 }
-
 ?>
