@@ -14,27 +14,27 @@
 <body>
     <h1> Place Order</h1>
   <form action = "../php/place_order.php" method = "post">
-    <input type = "text" name = "customer_name" class = "customer_info top" placeholder = "Customer Name...">
-    <input type = "text" name = "customer_address" class = "customer_info bottom" placeholder = "Customer Address...">
+    <input type = "text" name = "customer_fname" class = "customer_info top" placeholder = "First Name...">
+    <input type = "text" name = "customer_lname" class = "customer_info top" placeholder = "Last Name...">
+
+    <input type = "text" name = "customer_address" class = "customer_info bottom" placeholder = "Address...">
+    <input type = "text" name = "customer_zip" class = "customer_info bottom" placeholder = "ZIP...">
+    <input type = "text" name = "customer_quantity" class = "customer_info bottom" placeholder = "Quantity...">
+    <input type = "date" name = "customer_date" class = "customer_info bottom" placeholder = "YYYY/MM/DD">
     
+    <select id = "orderTypeList" name = "orderType" class = "customer_info top" required>
+        <option value = "" disabled selected hidden>Choose Order Type...</option>
+        <option value = "delivery">Delivery</option>
+        <option value = "takeout">Takeout</option>
+        <option value = "dinein">Dine-In</option>
+    </select>
 
-    <div class = "dropdown">        <!--FIXME: Make sure to use proper indentation, as seen here as opposed to lines 37-46.  improves readability.  also, if possible, don't use div tags to wrap everything.  usually there is a better way.-->
-        <button class = "customer_info dropbtn">Choose Order Type...</button>
-        <div class = "dropdown-content">
-        
-            <a href = "https://www.google.com">Google</a>       <!--FIXME: It would be better to use a list her (<ul> and <li> tags) if you decided to go this route.  Even better than that may be to use the input dropdown field.  It would simplify much of this.-->
-            <a href = "https://www.facebook.com">Facebook</a>
-            <a href = "https://www.youtube.com">YouTube</a>
-        </div>
-    </div>
-
-    <div class = "dropdown2">
-        <button class = "customer_info dropbtn2">Choose Topping...</button>
-         <div class = "dropdown-content2">
-             
-            <a href = "https://www.google.com">Google</a>
-        </div>
-    </div>
+    <select id = "toppingTypeList" name = "toppingType" class = "customer_info top" required>
+        <option value = "" disabled selected hidden>Choose Topping...</option>
+        <option value = "meat">Meat</option>
+        <option value = "veggies">Veggies</option>
+        <option value = "cheese">Cheese</option>
+    </select>
 
     <input type = "submit" name = "submit" value = "Submit" class = "customer_info submit_field">
     
