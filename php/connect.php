@@ -4,6 +4,7 @@ $host = "localhost";
 $dbusername = "root";
 $dbpassword = "";
 $dbpassword = '';
+
 $dbname = "pizzeriadb";
 
     $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
