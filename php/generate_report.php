@@ -34,32 +34,35 @@ $orderType = $_POST["orderType"];
 
 <?php
 
-$query1 = "INSERT INTO generate_Report (startDate, endDate, allDates, orderType) VALUES ("$startDate, $endDate, $allDate, $orderType");
+$query1 = "INSERT INTO generate_Report (startDate, endDate, allDates, orderType) VALUES ('$startDate, $endDate, $allDate, $orderType');
 
 if($mysqli_$query($conn, $query1))
 {
-    echo "<script type = 'text/javascript'> alert ('Sucess') ; </script>" 
+    echo "<script type = 'text/javascript'> alert ('Success') </script>"; 
 }
 
 else 
 
 {
-    echo "<script type = 'text/javascript'> alert ('Fail') ; </script>";
+    echo "<script type = 'text/javascript'> alert ('Fail') </script>";
 }
 
 <?php
 
-$sql = "SELECT * FROM generate_Report  INNER JOIN pizza_order ON customer.id = pizza_order.customer_id
-ORDER BY id DESC";
+    $sql = "SELECT * FROM generate_Report  INNER JOIN pizza_order ON customer.id = pizza_order.customer_id
+    ORDER BY id DESC";
 
-if ($result = mysqli_query($conn, $sql))
-{
-$count = 0;
-while ($row = mysqli_fetch_row($result))
-{
-    if ($count != 8)
+    if ($result = mysqli_query($conn, $sql))
     {
+    $count = 0;
+    }
+
+    while ($row = mysqli_fetch_row($result))
+    {
+    if ($count != 8)
         $count++;
+    
+    }
 ?>
     <tr>
         <td class = "table_cell"><?php echo $row[2];?></td>

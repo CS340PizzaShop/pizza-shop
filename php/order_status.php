@@ -67,7 +67,7 @@ include "connect.php";
                             </tr>
 
                         <?php
-
+//<!-- http://localhost/pizza-shop/HTML/order_status.html -->
                             }
 
                     }
