@@ -2,7 +2,11 @@
 
 $host = "localhost";
 $dbusername = "root";
+<<<<<<< HEAD
 $dbpassword = "";
+=======
+$dbpassword = '';
+>>>>>>> 653cc1a87b2c08be7abb06c59fbb02b0ae55e361
 $dbname = "pizzeriadb";
 
     $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
