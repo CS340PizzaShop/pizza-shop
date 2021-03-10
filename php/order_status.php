@@ -1,82 +1,75 @@
-<!DOCTYPE html>
-<html lang = "en-US";>
+<?php
+include "connect.php";
+?>
 
-<section class = "orderStatus">
-    <h1 class = "title">Order Status</h1>
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fatima's Pizzeria - order page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "../CSS/place_order.css"> <!-- the ../ moves up a folder, then finds the css-->
+    <script src = "script.js" defer></script>  <!--deferring means that JS will be downloaded, but it will not be executed until all the HTML and CSS have been loaded -->
+
+</head>
+
+<body>
+
+<section class = "order_status">
+        <hl class = "title">Order Status<h1> 
 
     <table>
         <tr>
-            <th>Last Name</th>
+            <th>Customer Name</th>
             <th>Order ID</th>
             <th>Status</th>
         </tr>
-    </table>
-</section>
-</html>
 
-<?php
+            <?php
 
-$order1ID = $_POST["order1"];
-$order2ID = $_POST["order2"];
-$order3ID = $_POST["order3"];
-$order4ID = $_POST["order4"];
-$order5ID = $_POST["order5"];
-$order6ID = $_POST["order6"];
-$order7ID = $_POST["order7"];
-$order8ID = $_POST["order8"]; 
+                $sql = "SELECT customer FROM customer INNER JOIN pizza FOR customer.id = pizza.customer_id
+                ORDER BY id ASC";
 
-    include "connect.php";
+            if ($result = mysqli_query($conn, $sql))
+            {
+                $count = 1;
+                while ($row = mysqli_fetch_array($result))
+                {
+                    if ($count != 8)
+                    {
+                        $count++;
+                ?>
+                    <tr>
+                        <td class = "table_cells"><?php echo $row[0];?></td>
+                        ($row[1]) -->
+                        <td class = "table_cells"><?php echo '(' . $row[3] . ')';?></td>
+                        [5]) -->
 
-    $cSql = "SELECT * FROM customer ORDER BY id DESC LIMIT 1";
-    $cResult = $conn->query($cSql);
-    $customerID_fk = $cResult->fetch_array()['id'] ?? '';
-    $customerID_fk++;
+                        <?php
+                            if ($row[13] == 1)
+                            {
+                        ?>        
+                                <td class = "table_cells">
+                                    <button id="btn" style = "color: #05AA00;">Completed</button>
+                                </td>
+                            <?php
+                            }
+                            else
+                            {
+                            ?>
+                                <td class  = "table_cells">
+                                    <a href = 'update_fulfill.php?id=<?php echo $row[9]?>'>
+                                        <button id="btn">In Progress</button>
+                                    </a>
+                                </td>
+                            </tr>
 
-    $pSql = "SELECT * FROM pizza ORDER BY id DESC LIMIT 1";
-    $pResult = $conn->query($pSql);
-    $pizzaID_fk = $pResult->fetch_array()['id'] ?? '';
-    $pizzaID_fk++;
+                        <?php
 
-    $sql = "SELECT * FROM  customer INNER JOIN  pizza_order ON customer.id = pizza_order.customer_id
-    ORDER BY id DESC";
+                            }
 
-    if ($result = mysqli_query($conn, $sql)) {
-        $count = 0;
-        while ($row = mysqli_fetch_row($result)) {
-            if ($count != 8) {
-                $count++;
+                    }
+                }
             }
-        }
-    }
-?>
-
-<tr>
-    <td class = "table_cell"><?php echo $row[2];?></td>
-
-    <td class = "table_cell"><?php echo '(' . $row[5] . ')';?></td>
-
-    <?php 
-        if ($row[11] == 1) {
-
-    ?>
-        <td class = "table_cell">
-            <button id = "statusBtn" style = "background-color: #05FF00;">Completed</button>
-        </td>
-        
-    <?php
-        }
-        
-        else {
-    ?>
-    
-    <td class = "table_cell">
-        <a href = 'update_fulfilled.php?id = <?php echo $row[5]?>'>
-
-        <button id = "statusBtn">In Progress</button>
-        </a>
-    </td>
-</tr>
-
-<?php
-            }
-?>
