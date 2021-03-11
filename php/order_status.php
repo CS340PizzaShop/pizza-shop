@@ -22,9 +22,10 @@ include "connect.php";
 
     <table>
         <tr>
-            <th>Customer Name</th>
+            <th>Order Name</th>
             <th>Order ID</th>
             <th>Status</th>
+            
         </tr>
 
             <?php

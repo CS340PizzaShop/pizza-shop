@@ -34,9 +34,9 @@ $orderType = $_POST["orderType"];
 
 <?php
 
-$query1 = "INSERT INTO generate_Report (startDate, endDate, allDates, orderType) VALUES ('$startDate, $endDate, $allDate, $orderType');
+$query1 = "INSERT INTO generate_Report (startDate, endDate, allDates, orderType) VALUES ('$startDate', '$endDate', '$allDate', '$orderType');
 
-if($mysqli_$query($conn, $query1))
+if($mysqli_$query($conn, $query1)) 
 {
     echo "<script type = 'text/javascript'> alert ('Success') </script>"; 
 }
