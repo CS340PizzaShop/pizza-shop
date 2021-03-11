@@ -29,14 +29,18 @@ $orderType = $_POST["orderType"];
         <tr>
             <th> Order Type </th>
             <th> Date </th> 
+        </tr>
+        </table>
+    </section>
+</body>
+</html>
 
-</tr>
 
 <?php
 
-$query1 = "INSERT INTO generate_Report (startDate, endDate, allDates, orderType) VALUES ('$startDate', '$endDate', '$allDate', '$orderType');
+$query1 = "INSERT INTO generate_Report (startDate, endDate, allDates, orderType) VALUES ('$startDate', '$endDate', '$allDate', '$orderType')";
 
-if($mysqli_$query($conn, $query1)) 
+if (mysqli_query($conn, $query1)) 
 {
     echo "<script type = 'text/javascript'> alert ('Success') </script>"; 
 }
@@ -46,7 +50,7 @@ else
 {
     echo "<script type = 'text/javascript'> alert ('Fail') </script>";
 }
-
+?>
 <?php
 
     $sql = "SELECT * FROM generate_Report  INNER JOIN pizza_order ON customer.id = pizza_order.customer_id
@@ -64,6 +68,7 @@ else
     
     }
 ?>
+    
     <tr>
         <td class = "table_cell"><?php echo $row[2];?></td>
         ($row[2]) -->
@@ -73,7 +78,9 @@ else
         <?php
             if ($row[11] == 1)
             {
-        ?>        
+            }
+        ?> 
+               
 
 
 
