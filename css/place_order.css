@@ -41,7 +41,19 @@ h1 {
     font-size: 20px;
 }
 
+.top
+{
+    margin-top: 20px;;
+}
+
 .submit_field {
     padding: 5px;
+}
+
+.homeBtn {
+    position: relative;
+    float: right;
+    bottom: -100px;
+    left: -20px;
 }
 

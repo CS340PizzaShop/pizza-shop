@@ -1,6 +1,7 @@
 import sys
 import json
-
+import numpy as np
+from matplotlib import pyplot as plt
 
 after_json = sys.argv[1]
 employee_pay = sys.argv[2]
