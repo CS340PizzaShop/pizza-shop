@@ -44,9 +44,9 @@ include "connect.php";
             ?>
                     <tr>
                         <td class = "table_cells"><?php echo $row[0];?></td>
-                        ($row[1]) -->
+                        <!-- ($row[1]) -->
                         <td class = "table_cells"><?php echo '(' . $row[3] . ')';?></td>
-                        [5]) -->
+                        <!-- [5]) -->
 
                         <?php
                             if ($row[13] == 1)
