@@ -10,7 +10,7 @@ include "connect.php";
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fatima's Pizzeria - order page</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
-    <link rel = "stylesheet" href = "../CSS/order_status.css"> <!-- the ../ moves up a folder, then finds the css-->
+    <link rel = "stylesheet" href = "../css/order_status.css"> <!-- the ../ moves up a folder, then finds the css-->
     <script src = "script.js" defer></script>  <!--deferring means that JS will be downloaded, but it will not be executed until all the HTML and CSS have been loaded -->
 
 </head>
@@ -20,12 +20,24 @@ include "connect.php";
 
         <h1>Order Status</h1> 
 
+
+    <h1>Order Status</h1> 
+
+<section class = "order_status">
+        <hl class = "title"><h1> 
+
     <table>
         <tr>
             <th>Order Name</th> <!-- Could this be changed to a php version, a la 'echo row[0]' ?-->
+            <th>Order ID</th>
+            <th>Status</th>
             <th> Order ID</th>
             <th> Status</th>
           
+
+            
+
+
         </tr>
 
             <?php
@@ -36,7 +48,11 @@ include "connect.php";
             if ($result = mysqli_query($conn, $sql))
             {
                 $count = 0;
+
                 while ($row = mysqli_fetch_array($result))
+
+                while ($row = mysqli_fetch_row($result))
+
                 {
                     if ($count != 8)
                     {
@@ -44,12 +60,12 @@ include "connect.php";
             ?>
                     <tr>
                         <td class = "table_cells"><?php echo $row[0];?></td>
-                        <!-- ($row[1]) -->
-                        <td class = "table_cells"><?php echo '(' . $row[3] . ')';?></td>
-                        <!-- [5]) -->
+
+                        <td class = "table_cells"><?php echo '(' . $row[3] .')';?></td>
+                        
 
                         <?php
-                            if ($row[13] == 1)
+                            if ($row[11] == 1)
                             {
                         ?>        
                                 <td class = "table_cells">
@@ -66,15 +82,15 @@ include "connect.php";
                                     </a>
                                 </td>
                             </tr>
-
                         <?php
 //<!-- http://localhost/pizza-shop/HTML/order_status.html -->
                         }
                     }
                 }
             }
-?>
-            </table>
-        
-    </body>
+            ?>
+    </table>
+
+
+</body>
 </html>
