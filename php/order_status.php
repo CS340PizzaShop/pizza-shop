@@ -17,27 +17,16 @@ include "connect.php";
 
 <body>
 
-
-        <h1>Order Status</h1> 
-
-
     <h1>Order Status</h1> 
-
-<section class = "order_status">
-        <hl class = "title"><h1> 
 
     <table>
         <tr>
             <th>Order Name</th> <!-- Could this be changed to a php version, a la 'echo row[0]' ?-->
             <th>Order ID</th>
             <th>Status</th>
-            
-          
-
-            
-
 
         </tr>
+
 
             <?php
                 
@@ -89,7 +78,5 @@ include "connect.php";
             }
             ?>
     </table>
-
-
 </body>
 </html>
