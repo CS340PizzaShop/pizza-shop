@@ -17,16 +17,8 @@
 </head>
 
 <body>
-<section class = "transition_page">
-    <h1 class = "title">Choose Task</h1>
-    <table>
-         <tr>
-            <th>Place Order</th>
-            <th>Order Status</th>
-            <th>Generate Report</th>
-
     <?php
-        
+
     ?>
 
 <h1>Choose Task</h1>
