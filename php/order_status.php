@@ -17,29 +17,20 @@ include "connect.php";
 
 <body>
 
-<<<<<<< HEAD
     <h1>Order Status</h1> 
-=======
-<section class = "order_status">
-        <hl class = "title"><h1> 
->>>>>>> 0002b97a7c8ad2fefb2de7817e7bff591a2a07dd
 
     <table>
         <tr>
             <th>Order Name</th> <!-- Could this be changed to a php version, a la 'echo row[0]' ?-->
-<<<<<<< HEAD
             <th>Order ID</th>
             <th>Status</th>
-=======
-            <th> Order ID</th>
-            <th> Status</th>
-            
->>>>>>> 0002b97a7c8ad2fefb2de7817e7bff591a2a07dd
+
         </tr>
+
 
             <?php
                 
-                $sql = "SELECT customer FROM customer INNER JOIN pizza FOR customer.id = pizza.customer_id
+                $sql = "SELECT * FROM customer INNER JOIN pizza_order ON customer.id = pizza_order.customer_id
                 ORDER BY id DESC";
 
             if ($result = mysqli_query($conn, $sql))
@@ -52,9 +43,9 @@ include "connect.php";
                         $count++;
             ?>
                     <tr>
-                        <td class = "table_cells"><?php echo $row[0];?></td>
+                        <td class = "table_cells"><?php echo $row[1];?></td>
 
-                        <td class = "table_cells"><?php echo '(' . $row[3] .')';?></td>
+                        <td class = "table_cells"><?php echo '(' . $row[5] .')';?></td>
                         
 
                         <?php
@@ -83,7 +74,5 @@ include "connect.php";
             }
             ?>
     </table>
-
-
 </body>
 </html>
