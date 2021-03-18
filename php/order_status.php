@@ -18,18 +18,16 @@ include "connect.php";
 <body>
 
 <section class = "order_status">
-        <hl class = "title">Order Status<h1> 
+        <hl class = "title"><h1> 
 
     <table>
         <tr>
             <th>Order Name</th> <!-- Could this be changed to a php version, a la 'echo row[0]' ?-->
-            <th>Order ID</th>
-            <th>Status</th>
-            <?php
-            echo "Hello, World!";
-            ?>
+            <th> Order ID</th>
+            <th> Status</th>
+            
         </tr>
-</html>
+
             <?php
                 
                 $sql = "SELECT customer FROM customer INNER JOIN pizza FOR customer.id = pizza.customer_id
@@ -43,7 +41,7 @@ include "connect.php";
                     if ($count != 8)
                     {
                         $count++;
-                ?>
+            ?>
                     <tr>
                         <td class = "table_cells"><?php echo $row[0];?></td>
                         ($row[1]) -->
