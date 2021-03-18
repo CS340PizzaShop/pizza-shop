@@ -36,7 +36,11 @@ include "connect.php";
             if ($result = mysqli_query($conn, $sql))
             {
                 $count = 0;
+
+                while ($row = mysqli_fetch_array($result))
+
                 while ($row = mysqli_fetch_row($result))
+
                 {
                     if ($count != 8)
                     {
@@ -53,7 +57,7 @@ include "connect.php";
                             {
                         ?>        
                                 <td class = "table_cells">
-                                    <button id="btn" style = "color: #05AA00;">Completed</button>
+                                    <button class = "complete">Completed</button>
                                 </td>
                             <?php
                             }
@@ -61,13 +65,13 @@ include "connect.php";
                             {
                             ?>
                                 <td class  = "table_cells">
-                                    <a href = 'update_fulfilled.php?id=<?php echo $row[5]?>'>
-                                        <button id="btn">In Progress</button>
+                                    <a href = 'update_fulfill.php?id=<?php echo $row[5]?>'>
+                                        <button class = "inProgress">In Progress</button>
                                     </a>
                                 </td>
                             </tr>
                         <?php
-
+//<!-- http://localhost/pizza-shop/HTML/order_status.html -->
                         }
                     }
                 }
