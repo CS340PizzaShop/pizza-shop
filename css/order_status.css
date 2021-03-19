@@ -73,3 +73,22 @@ body {
     bottom: -100px;
     left: -20px;
 }
+
+table {
+    margin: auto auto auto;
+}
+
+td {
+    padding: 15px;
+}
+
+.table_cells {
+    color: #328E00;
+    background: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 17px;
+    border: 3px solid;
+    width: 25em;
+    margin-right: 10em;
+}
