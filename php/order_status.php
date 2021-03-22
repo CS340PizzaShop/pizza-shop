@@ -47,9 +47,9 @@ include "connect.php";
                         $count++;
             ?>
                     <tr>
-                        <td class = "table_cells"><?php echo $row[1];?></td>
+                        <td class = "table_cells"><?php echo $row[3];?></td>
 
-                        <td class = "table_cells"><?php echo '(' . $row[5] .')';?></td>
+                        <td class = "table_cells"><?php echo '(' . $row[1] .')';?></td>
                         
 
                         <?php
