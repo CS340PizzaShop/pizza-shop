@@ -38,6 +38,7 @@ include "connect.php";
               $dbname = "pizzeriadb";
               
               $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
+              
               if ($result = mysqli_query($conn, $sql))
               echo "Success";
               else
@@ -93,7 +94,7 @@ include "connect.php";
                                 </td>
                             </tr>
                         <?php
-//<!-- http://localhost/pizza-shop/HTML/order_status.html -->
+//<!-- http://localhost/pizza-shop/php/order_status.php -->
                         }
                     }
                 }
