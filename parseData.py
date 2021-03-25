@@ -65,23 +65,55 @@ for i in range(len(jsonArr)):
     #find how many of each total order type there were
     if (row["order_type"] == 'delivery'):
         totalDeliveryCount += int(row["quantity"])
+
     elif (row["order_type"] == 'dinein'):
         totalDineinCount += int(row["quantity"])
+
     elif (row["order_type"] == 'takeout'):
         totalTakeoutCount += int(row["quantity"])
 
     #find how many of each total pizza there were
     if (row["topping_type"] == 'cheese'):
         totalCheeseCount += int(row["quantity"])
+
     elif (row["topping_type"] == 'meat'):
         totalMeatCount += int(row["quantity"])
+
     elif (row["topping_type"] == 'veggies'):
         totalVeggieCount += int(row["quantity"])
 
 
-    #find out delivery cheese
-    if((row["order_type"] == 'delivery') and (row["topping_type"] == 'cheese')):
+    #find how many delivery and what type
+    if ((row["order_type"] == 'delivery') and (row["topping_type"] == 'cheese')):
         deliveryCheeseCount += int(row["quantity"])
+
+    elif ((row["order_type"] == 'delivery') and (row["topping_type"] == 'meat')):
+        deliveryMeatCount += int(row["quantity"])
+
+    elif ((row["order_type"] == 'delivery') and (row["topping_type"] == 'veggies')):
+        deliveryVeggieCount += int(row["quantity"])
+
+    
+    #find how many takeout and what type
+    if ((row["order_type"] == 'takeout') and (row["topping_type"] == 'cheese')):
+        takeoutCheeseCount += int(row["quantity"])
+
+    elif ((row["order_type"] == 'takeout') and (row["topping_type"] == 'meat')):
+        takeoutMeatCount += int(row["quantity"])
+
+    elif ((row["order_type"] == 'takeout') and (row["topping_type"] == 'veggies')):
+        takeoutVeggieCount += int(row["quantity"])
+
+    
+    #find how many dinein and what type
+    if ((row["order_type"] == 'dinein') and (row["topping_type"] == 'cheese')):
+        dineinCheeseCount += int(row["quantity"])
+
+    elif ((row["order_type"] == 'dinein') and (row["topping_type"] == 'meat')):
+        dineinMeatCount += int(row["quantity"])
+
+    elif ((row["order_type"] == 'dinein') and (row["topping_type"] == 'veggies')):
+        dineinVeggieCount += int(row["quantity"])
 
 
 
