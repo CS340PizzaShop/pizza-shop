@@ -30,7 +30,7 @@ include "connect.php";
 
             <?php
                 
-                $sql = "SELECT * FROM customer INNER JOIN customer.id ON customer.LAST_NAME ORDER BY id DESC";
+                $sql = "SELECT * FROM customer INNER JOIN pizza_order ON customer.id = pizza_order.customer_id ORDER BY id DESC";
 
               $host = "localhost";
               $dbusername = "root";
@@ -44,15 +44,6 @@ include "connect.php";
               else
               echo "Not Success";
 
-            /*  Current Problem(s): 
-                Table will not display.
-
-                Possible Cause(s):
-                '$result' does not function properly.
-                '$conn' does not function proprely.
-                '$sql' does not contain the correct values.
-                pizzeriadb is not seet up properly.    
-            */
 
 
 
@@ -100,6 +91,10 @@ include "connect.php";
                 }
             }
         }
+
+        #TODO:  Add home button to go back to appropriate transitional page
+        #TODO:  add column to loginform to see which account is active, thus taking us back to the appropriate transitional page
+        #TODO:  show "in-progress" as opposed to opening up the page and everything is already 
             ?>
     </table>
 </body>

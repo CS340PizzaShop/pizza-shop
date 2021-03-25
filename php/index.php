@@ -29,32 +29,32 @@ if (!empty($username)){
         //  if the username entered by the user matches the manager username and password in the database...
         if($username == $managerUsername && $password == $managerPassword)
         {
-            header("Location: http://localhost/Pizza%20Website/HTML/transitional_page.html"); //  redirects to the "choose task" page that HAS generate report section
+            header("Location: http://localhost/pizza-shop/HTML/transition_page.html"); //  redirects to the "choose task" page that HAS generate report section
         }
         else if($username == $employeeUsername && $password == $employeePassword)
         {
-            header("Location: http://localhost/Pizza%20Website/HTML/eTransitional_page.html"); //  redirects to the "choose task" page that DOESN'T have generate report section
+            header("Location: http://localhost/pizza-shop/HTML/employee_transition_page.html"); //  redirects to the "choose task" page that DOESN'T have generate report section
         }
 
         //  if query insertion is failure
         else
         {
             echo "<script type = 'text/javascript'>alert('Not Valid Sign-in!'); </script>";    // display alert message over page
-            header('Refresh: .1; URL=http://localhost/Pizza%20Website/HTML/index.html'); //  redirects to the same login page to try again after .1 second(so it can show the failure message)
+            header('Refresh: .1; URL=http://localhost/pizza-shop/HTML/index.html'); //  redirects to the same login page to try again after .1 second(so it can show the failure message)
         }
         mysqli_close($conn);
 
     }
     else{
         echo "<script type = 'text/javascript'>alert('Password cannot be empty'); </script>"; // display alert message over page
-        header('Refresh: .1; URL=http://localhost/Pizza%20Website/HTML/index.html'); //  redirects to the same login page to try again after .1 second(so it can show the failure message)
+        header('Refresh: .1; URL=http://localhost/pizza-shop/HTML/index.html'); //  redirects to the same login page to try again after .1 second(so it can show the failure message)
         die();
     }
 
 }
 else{
     echo "<script type = 'text/javascript'>alert('Username cannot be empty'); </script>";
-    header('Refresh: .1; URL=http://localhost/Pizza%20Website/HTML/index.html'); //  redirects to the same login page to try again after .1 second(so it can show the failure message)    
+    header('Refresh: .1; URL=http://localhost/pizza-shop/HTML/index.html'); //  redirects to the same login page to try again after .1 second(so it can show the failure message)    
     die();
 }
 ?>
