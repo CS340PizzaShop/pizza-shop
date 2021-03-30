@@ -170,6 +170,27 @@ for i in range(len(jsonArr)):
 
 
     #find cost of takeout orders
+    if ((row["order_type"] == 'takeout') and (row["topping_type"] == 'cheese')):
+        takeoutCost = takeoutPercentage * cheeseOrderCost
+        totalTakeoutCost += takeoutCost + cheeseOrderCost
+
+    elif ((row["order_type"] == 'takeout') and (row["topping_type"] == 'meat')):
+        takeoutCost = takeoutPercentage * meatOrderCost
+        totalTakeoutCost += takeoutCost + meatOrderCost
+
+    elif ((row["order_type"] == 'takeout') and (row["topping_type"] == 'veggies')):
+        takeoutCost = takeoutPercentage * veggieOrderCost
+        totalTakeoutCost += takeoutCost + veggieOrderCost
+
+    #find cost of all orders
+    totalOrderCost = totalDeliveryCost + totalDineinCost + totalTakeoutCost
+
+    #find total profits
+    pizzaProfit = 18
+    totalProfit = 0
+
+    totalProfit = (pizzaProfit * totalOrderCount) - totalOrderCost
+    
 
 
 #find out total orders
