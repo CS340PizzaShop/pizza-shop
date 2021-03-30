@@ -44,6 +44,8 @@ totalCheeseCount    = 0
 totalMeatCount      = 0
 totalVeggieCount    = 0
 
+totalOrderCount     = 0
+
 #  specifically for delivery
 deliveryCheeseCount = 0
 deliveryMeatCount   = 0
@@ -93,7 +95,17 @@ for i in range(len(jsonArr)):
     elif ((row["order_type"] == 'delivery') and (row["topping_type"] == 'veggies')):
         deliveryVeggieCount += int(row["quantity"])
 
-    
+    #find how many dinein and what type
+    if ((row["order_type"] == 'dinein') and (row["topping_type"] == 'cheese')):
+        dineinCheeseCount += int(row["quantity"])
+
+    elif ((row["order_type"] == 'dinein') and (row["topping_type"] == 'meat')):
+        dineinMeatCount += int(row["quantity"])
+
+    elif ((row["order_type"] == 'dinein') and (row["topping_type"] == 'veggies')):
+        dineinVeggieCount += int(row["quantity"])
+
+
     #find how many takeout and what type
     if ((row["order_type"] == 'takeout') and (row["topping_type"] == 'cheese')):
         takeoutCheeseCount += int(row["quantity"])
@@ -105,16 +117,59 @@ for i in range(len(jsonArr)):
         takeoutVeggieCount += int(row["quantity"])
 
     
-    #find how many dinein and what type
+    
+    #find total orders
+    totalOrderCount = totalDeliveryCount + totalDineinCount + totalTakeoutCount
+
+
+    #order costs
+    cheeseOrderCost = 5
+    meatOrderCost = 8
+    veggieOrderCost = 8
+
+    #order type costs
+    deliveryCost = 3
+
+    dineinPercentage = 0.05
+    dineinCost = 0
+
+    takeoutPercentage = 0.15
+    takeoutCost = 0
+
+    #total order cost by type
+    totalDeliveryCost = 0
+    totalDineinCost = 0
+    totalTakeoutCost = 0
+
+    #total order cost
+    totalOrderCost = 0
+
+    #find cost of delivery orders
+    if ((row["order_type"] == 'delivery') and (row["topping_type"] == 'cheese')):
+        totalDeliveryCost += deliveryCost + cheeseOrderCost
+    
+    elif ((row["order_type"] == 'delivery') and (row["topping_type"] == 'meat')):
+        totalDeliveryCost += deliveryCost + meatOrderCost
+
+    elif ((row["order_type"] == 'delivery') and (row["topping_type"] == 'veggies')):
+        totalDeliveryCost += deliveryCost + veggieOrderCost
+
+    
+    #find cost of dinein orders
     if ((row["order_type"] == 'dinein') and (row["topping_type"] == 'cheese')):
-        dineinCheeseCount += int(row["quantity"])
+        dineinCost = dineinPercentage * cheeseOrderCost
+        totalDineinCost += dineinCost + cheeseOrderCost
 
     elif ((row["order_type"] == 'dinein') and (row["topping_type"] == 'meat')):
-        dineinMeatCount += int(row["quantity"])
+        dineinCost = dineinPercentage * meatOrderCost
+        totalDineinCost += dineinCost + meatOrderCost
 
     elif ((row["order_type"] == 'dinein') and (row["topping_type"] == 'veggies')):
-        dineinVeggieCount += int(row["quantity"])
+        dineinCost = dineinPercentage * veggieOrderCost
+        totalDineinCost += dineinCost + veggieOrderCost
 
+
+    #find cost of takeout orders
 
 
 #find out total orders
