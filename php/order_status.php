@@ -92,12 +92,12 @@ include "connect.php";
             }
         }
 
-        #TODO:  Add home button to go back to appropriate transitional page
+        #TODO:  Add home button to go back to appropriate transitional page   // Done. - Ryan
         #TODO:  add column to loginform to see which account is active, thus taking us back to the appropriate transitional page
         #TODO:  show "in-progress" as opposed to opening up the page and everything is already 
             ?>
     </table>
-    <a href = "transition_page.html" class = "homeBtn">
+    <a href = "transition.php" class = "homeBtn">
                 <img src = "../css/images/homeBtn.svg" class = "" alt = "home button"> 
     </a>
 </body>
