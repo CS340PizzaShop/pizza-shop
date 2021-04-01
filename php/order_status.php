@@ -97,5 +97,8 @@ include "connect.php";
         #TODO:  show "in-progress" as opposed to opening up the page and everything is already 
             ?>
     </table>
+    <a href = "transition_page.html" class = "homeBtn">
+                <img src = "../css/images/homeBtn.svg" class = "" alt = "home button"> 
+    </a>
 </body>
 </html>
