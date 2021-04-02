@@ -1,11 +1,21 @@
 <?php
+// input validation function for the form data put in by the user
+function test_input($data) {
+    $data = trim($data);                //  strip whitespace from beginning and end
+    $data = stripslashes($data);        //  unquotes a quoted string
+    $data = htmlspecialchars($data);    //  converts special characters to HTML entities, thereby breaking their purpose if used maliciously
+    return $data;
+}
 
-$customer_fname = $_POST['customer_fname'];
-$customer_lname = $_POST['customer_lname'];
-$customer_address = $_POST['customer_address'];
-$customer_zip = $_POST['customer_zip'];
-$customer_quantity = $_POST['customer_quantity'];
-$customer_date = $_POST['customer_date'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$customer_fname = test_input($_POST['customer_fname']);
+$customer_lname = test_input($_POST['customer_lname']);
+$customer_address = test_input($_POST['customer_address']);
+$customer_zip = test_input($_POST['customer_zip']);
+$customer_quantity = test_input($_POST['customer_quantity']);
+$customer_date = test_input($_POST['customer_date']);
+}
+
 
 if (isset($_POST['orderType']))
 {
@@ -20,8 +30,8 @@ if (isset($_POST['toppingType']))
 if (!empty($customer_fname)) {
     if (!empty($customer_lname)) {
         if (!empty($customer_address)) {
-            if (!empty($customer_zip)) {
-                if (!empty($customer_quantity)) {
+            if (!empty($customer_zip) && is_numeric($customer_zip)) {
+                if (!empty($customer_quantity) && is_numeric($customer_quantity)) {
                     if (!empty($customer_date)) {
 
                         include "connect.php";
@@ -43,7 +53,7 @@ if (!empty($customer_fname)) {
                         if (mysqli_query($conn, $query1) && mysqli_query($conn, $query2) && mysqli_query($conn, $query3))
                         {
                             echo "<script type = 'text/javascript'>alert('Success'); </script>";
-                            echo $pizzaID_fk;
+                            
                         }
 
                         else
@@ -60,13 +70,13 @@ if (!empty($customer_fname)) {
                     }
                 }
                 else {
-                    echo "<script type = 'text/javascript'>alert('quantity cannot be empty'); </script>";
+                    echo "<script type = 'text/javascript'>alert('quantity cannot be empty or noninteger'); </script>";
                     header('Refresh: .1; URL=http://localhost/pizza-shop/HTML/place_order.html');
                     die();
                 }
             }
             else {
-                echo "<script type = 'text/javascript'>alert('ZIP cannot be empty'); </script>";
+                echo "<script type = 'text/javascript'>alert('ZIP cannot be empty or noninteger'); </script>";
                 header('Refresh: .1; URL=http://localhost/pizza-shop/HTML/place_order.html');
                 die();
             }
