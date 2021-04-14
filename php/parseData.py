@@ -217,7 +217,7 @@ ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 ax1.set_title("Sales between " + str(startDate) + " and " + str(endDate) + " by Order Type")
 
-plt.savefig('C:/xampp/htdocs/Pizza Website/css/images/orderType_pie_chart.png', dpi=100) #saves an updated png pie chart that can then be called via href to show on the php or html page
+plt.savefig('C:/xampp/htdocs/pizza-shop/css/images/orderType_pie_chart.png', dpi=100) #saves an updated png pie chart that can then be called via href to show on the php or html page
 
 
 # make the toppingType pie chart
