@@ -201,12 +201,13 @@ for i in range(len(jsonArr)):
 
 # make the orderType pie chart
 
+
 # make the orderType pie chart
 labels = 'Delivery', 'Dine-in', 'Takeout'
 
-deliveryWedge = totalDeliveryCount / totalPizzasSold
-dineinWedge = totalDineinCount / totalPizzasSold
-takeoutWedge = totalTakeoutCount / totalPizzasSold
+deliveryWedge = totalDeliveryCount / totalOrderCount
+dineinWedge = totalDineinCount / totalOrderCount
+takeoutWedge = totalTakeoutCount / totalOrderCount
 
 sizes = [deliveryWedge, dineinWedge, takeoutWedge]
 
@@ -222,9 +223,9 @@ plt.savefig('C:/xampp/htdocs/Pizza Website/css/images/orderType_pie_chart.png', 
 # make the toppingType pie chart
 labels = 'Meat', 'Cheese', 'Veggie'
 
-meatWedge = (deliveryMeatCount + takeoutMeatCount + dineinMeatCount) / totalPizzasSold
-cheeseWedge = (deliveryCheeseCount + takeoutCheeseCount + dineinCheeseCount) / totalPizzasSold
-veggieWedge = (deliveryVeggieCount + takeoutVeggieCount + dineinVeggieCount) / totalPizzasSold
+meatWedge = (deliveryMeatCount + takeoutMeatCount + dineinMeatCount) / totalOrderCount
+cheeseWedge = (deliveryCheeseCount + takeoutCheeseCount + dineinCheeseCount) / totalOrderCount
+veggieWedge = (deliveryVeggieCount + takeoutVeggieCount + dineinVeggieCount) / totalOrderCount
 
 sizes = [meatWedge, cheeseWedge, veggieWedge]
 
@@ -234,6 +235,6 @@ ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 ax1.set_title("Sales between " + str(startDate) + " and " + str(endDate) + " by Topping Type")
 
-plt.savefig('C:/xampp/htdocs/Pizza Website/css/images/toppingType_pie_chart.png', dpi=100) #saves an updated png pie chart that can then be called via href to show on the php or html page
+plt.savefig('C:/xampp/htdocs/pizza-shop/css/images/toppingType_pie_chart.png', dpi=100) #saves an updated png pie chart that can then be called via href to show on the php or html page
 
 
