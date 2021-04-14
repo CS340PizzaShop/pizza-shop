@@ -14,7 +14,7 @@ jsonStr = json.dumps(jsonObject)  # takes in a json object and returns a string
 
 #Formatting the JSON String into an array ---
 
-#remove the first and last "
+#remove the first and last 
 if jsonStr.startswith('"') and jsonStr.endswith('"'):
     jsonStr = jsonStr[1:-1]
 
