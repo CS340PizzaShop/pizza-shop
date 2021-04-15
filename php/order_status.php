@@ -65,7 +65,6 @@ include "connect.php";
 
                         <td class = "table_cells"><?php echo '(' . $row[1] .')';?></td>
                         
-
                         <?php
                             if ($row[11] == 1)
                             {
@@ -95,10 +94,18 @@ include "connect.php";
         #TODO:  add column to loginform to see which account is active, thus taking us back to the appropriate transitional page
         #TODO:  show "in-progress" as opposed to opening up the page and everything is already 
             ?>
+            
     </table>
+    
+    {% if $enteredUserName == managerUsername && $enteredPassword == managerPassword}
+    <a href = "../HTML/transitional_page.html" class = "homeBtn">
+            <img src = "../css/images/homeBtn.svg" class = "" alt = "home button">
+    </a>
+    {% else %}
     <a href = "../HTML/employee_transition_page.html" class = "homeBtn">
             <img src = "../css/images/homeBtn.svg" class = "" alt = "home button"> 
     </a>
+    {% endif%}
     <!-- http://localhost/pizza-shop/HTML/transition_page.html -->
 </body>
 </html>

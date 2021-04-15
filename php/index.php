@@ -38,10 +38,14 @@ if (!empty($username)){
         //  if the username entered by the user matches the manager username and password in the database...
         if($username == $managerUsername && $password == $managerPassword)
         {
+            $enteredUsername = $username;
+            $enteredPassword = $password; 
             header("Location: http://localhost/pizza-shop/HTML/transition_page.html"); //  redirects to the "choose task" page that HAS generate report section
         }
         else if($username == $employeeUsername && $password == $employeePassword)
         {
+            $enteredUsername = $username;
+            $enteredPassword = $password;
             header("Location: http://localhost/pizza-shop/HTML/employee_transition_page.html"); //  redirects to the "choose task" page that DOESN'T have generate report section
         }
 
