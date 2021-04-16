@@ -89,7 +89,7 @@
                 // echo "<br>";
                 $pythonArr[] = $row;    //  add the row to the array that will be sent to parseData.py
             }
-
+            
             $jsonArr = json_encode($pythonArr);   // encode the array into a json format that can be read by the parseData.py
             
             //  find the number of days between the startDate and endDate
