@@ -96,12 +96,15 @@ include "connect.php";
             ?>
             
     </table>
-    
-    {% if $enteredUserName == managerUsername && $enteredPassword == managerPassword}
+    <?php
+     if ($enteredUserName == $managerUsername && $enteredPassword == $managerPassword)
+     ?>
     <a href = "../HTML/transitional_page.html" class = "homeBtn">
             <img src = "../css/images/homeBtn.svg" class = "" alt = "home button">
     </a>
-    {% else %}
+    <?php
+    else 
+    ?>
     <a href = "../HTML/employee_transition_page.html" class = "homeBtn">
             <img src = "../css/images/homeBtn.svg" class = "" alt = "home button"> 
     </a>
