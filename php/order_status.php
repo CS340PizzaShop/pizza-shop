@@ -108,7 +108,6 @@ include "connect.php";
     <a href = "../HTML/employee_transition_page.html" class = "homeBtn">
             <img src = "../css/images/homeBtn.svg" class = "" alt = "home button"> 
     </a>
-    {% endif%}
     <!-- http://localhost/pizza-shop/HTML/transition_page.html -->
 </body>
 </html>
