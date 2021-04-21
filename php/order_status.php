@@ -32,26 +32,26 @@ include "connect.php";
                 
                 $sql = "SELECT * FROM customer INNER JOIN pizza_order ON customer.id = pizza_order.customer_id ORDER BY id DESC";
 
-              $host = "localhost";
-              $dbusername = "root";
-              $dbpassword = "";
-              $dbname = "pizzeriadb";
+            //   $host = "localhost";
+            //   $dbusername = "root";
+            //   $dbpassword = "";
+            //   $dbname = "pizzeriadb";
               
-              $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
+            //   $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
               
-              if ($result = mysqli_query($conn, $sql))
-              echo "Success";
-              else
-              echo "Not Success";
+            //   if ($result = mysqli_query($conn, $sql))
+            //   echo "Success";
+            //   else
+            //   echo "Not Success";
 
 
 
 
-            if ($result = $conn->query($sql))
+            if ($result = mysqli_query($conn, $sql))
             {
                 $count = 0;
 
-                while ($row = mysqli_fetch_array($result)) {
+                
 
                 while ($row = mysqli_fetch_row($result))
 
@@ -61,9 +61,9 @@ include "connect.php";
                         $count++;
             ?>
                     <tr>
-                        <td class = "table_cells"><?php echo $row[0];?></td>
+                        <td class = "table_cells"><?php echo $row[2];?></td>
 
-                        <td class = "table_cells"><?php echo '(' . $row[1] .')';?></td>
+                        <td class = "table_cells"><?php echo '(' . $row[5] .')';?></td>
                         
                         <?php
                             if ($row[11] == 1)
@@ -88,7 +88,7 @@ include "connect.php";
                         }
                     }
                 }
-            }
+            
         }
 
         #TODO:  add column to loginform to see which account is active, thus taking us back to the appropriate transitional page
@@ -96,10 +96,10 @@ include "connect.php";
             ?>
             
     </table>
-    
+
     <a href = "../HTML/employee_transition_page.html" class = "homeBtn">
             <img src = "../css/images/homeBtn.svg" class = "" alt = "home button"> 
-    </a> -->
+    </a>
     <!-- I'm commenting this out until Daniel and I can get it to work properly. -->
     
     <!-- if ($enteredUserName == $managerUsername && $enteredPassword == $managerPassword)
