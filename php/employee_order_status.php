@@ -78,13 +78,13 @@ include "connect.php";
                             {
                             ?>
                                 <td class  = "table_cells">
-                                    <a href = 'update_fulfilled.php?id=<?php echo $row[5]?>'>
+                                    <a href = 'employee_update_fulfilled.php?id=<?php echo $row[5]?>'>
                                         <button class = "inProgress">In Progress</button>
                                     </a>
                                 </td>
                             </tr>
                         <?php
-//<!-- http://localhost/pizza-shop/php/order_status.php -->
+//<!-- http://localhost/pizza-shop/php/employee_order_status.php -->
                         }
                     }
                 }
@@ -97,7 +97,7 @@ include "connect.php";
             
     </table>
 
-    <a href = "../HTML/transition_page.html" class = "homeBtn">
+    <a href = "../HTML/employee_transition_page.html" class = "homeBtn">
             <img src = "../css/images/homeBtn.svg" class = "" alt = "home button"> 
     </a>
     <!-- I'm commenting this out until Daniel and I can get it to work properly. -->
@@ -110,7 +110,7 @@ include "connect.php";
     
     
     
-    <!-- http://localhost/pizza-shop/HTML/transition_page.html -->
+    <!-- http://localhost/pizza-shop/HTML/employee_transition_page.html -->
 
 </body>
 </html>

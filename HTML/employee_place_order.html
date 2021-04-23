@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fatima's Pizzeria - order page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "../CSS/place_order.css"> <!-- the ../ moves up a folder, then finds the css-->
+    <script src = "script.js" defer></script>  <!--deferring means that JS will be downloaded, but it will not be executed until all the HTML and CSS have been loaded -->
+
+</head>
+
+<body>
+    <h1> Place Order</h1>
+  <form action = "../php/employee_place_order.php" method = "post">
+    <input type = "text" name = "customer_fname" class = "customer_info top" placeholder = "First Name...">
+    <input type = "text" name = "customer_lname" class = "customer_info top" placeholder = "Last Name...">
+
+    <input type = "text" name = "customer_address" class = "customer_info bottom" placeholder = "Address...">
+    <input type = "text" name = "customer_zip" class = "customer_info bottom" placeholder = "ZIP...">
+    <input type = "text" name = "customer_quantity" class = "customer_info bottom" placeholder = "Quantity...">
+    <input type = "date" name = "customer_date" class = "customer_info bottom" placeholder = "YYYY/MM/DD">
+    
+    <select id = "orderTypeList" name = "orderType" class = "customer_info top" required>
+        <option value = "" disabled selected hidden>Choose Order Type...</option>
+        <option value = "delivery">Delivery</option>
+        <option value = "takeout">Takeout</option>
+        <option value = "dinein">Dine-In</option>
+    </select>
+
+    <select id = "toppingTypeList" name = "toppingType" class = "customer_info top" required>
+        <option value = "" disabled selected hidden>Choose Topping...</option>
+        <option value = "meat">Meat</option>
+        <option value = "veggies">Veggies</option>
+        <option value = "cheese">Cheese</option>
+    </select>
+
+    <input type = "submit" name = "submit" value = "Submit" class = "customer_info submit_field">
+    
+    <a href = "employee_transition_page.html" class = "homeBtn">
+        <img src = "../css/images/homeBtn.svg" class = "" alt = "home button"> 
+    </a>
+ </form>
+</body>
+</html>
+<!--http://localhost/pizza-shop/HTML/employee_place_order.html   <-- enter this address into chrome after starting XAMPP Apache and MySQL server-->
