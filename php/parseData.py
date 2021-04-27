@@ -190,6 +190,7 @@ for i in range(len(jsonArr)):
     totalProfit = 0
 
     totalProfit = (pizzaProfit * totalOrderCount) - totalOrderCost
+
     
 
 

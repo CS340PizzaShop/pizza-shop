@@ -1,0 +1,40 @@
+INSERT INTO customer (First_Name, Last_Name, Address, ZIP) VALUES ('OGBTR', 'CIKSK', 'PGPSJ', '70099');
+INSERT INTO pizza (topping_type) VALUES ('veggie');
+INSERT INTO pizza_order (order_type, order_date, quantity) VALUES ('dinein', '2020-07-03', '70');
+
+INSERT INTO customer (First_Name, Last_Name, Address, ZIP) VALUES ('QJFKH', 'BBEKC', 'TNIUA', '86211');
+INSERT INTO pizza (topping_type) VALUES ('veggie');
+INSERT INTO pizza_order (order_type, order_date, quantity) VALUES ('takeout', '2020-09-11', '86');
+
+INSERT INTO customer (First_Name, Last_Name, Address, ZIP) VALUES ('KNDJM', 'SNEAD', 'JISJR', '02393');
+INSERT INTO pizza (topping_type) VALUES ('meat');
+INSERT INTO pizza_order (order_type, order_date, quantity) VALUES ('dinein', '2020-01-26', '48');
+
+INSERT INTO customer (First_Name, Last_Name, Address, ZIP) VALUES ('QODBC', 'UVBUQ', 'AKCFJ', '39890');
+INSERT INTO pizza (topping_type) VALUES ('veggie');
+INSERT INTO pizza_order (order_type, order_date, quantity) VALUES ('takeout', '2020-08-03', '11');
+
+INSERT INTO customer (First_Name, Last_Name, Address, ZIP) VALUES ('JUIGB', 'VRICL', 'ERBQT', '80660');
+INSERT INTO pizza (topping_type) VALUES ('cheese');
+INSERT INTO pizza_order (order_type, order_date, quantity) VALUES ('delivery', '2020-08-24', '70');
+
+INSERT INTO customer (First_Name, Last_Name, Address, ZIP) VALUES ('BRVBM', 'IIGUP', 'UEIKU', '68798');
+INSERT INTO pizza (topping_type) VALUES ('cheese');
+INSERT INTO pizza_order (order_type, order_date, quantity) VALUES ('dinein', '2020-09-07', '67');
+
+INSERT INTO customer (First_Name, Last_Name, Address, ZIP) VALUES ('VCIAI', 'EKMBR', 'PEFOQ', '89633');
+INSERT INTO pizza (topping_type) VALUES ('cheese');
+INSERT INTO pizza_order (order_type, order_date, quantity) VALUES ('delivery', '2020-09-29', '38');
+
+INSERT INTO customer (First_Name, Last_Name, Address, ZIP) VALUES ('EUOOH', 'VRDER', 'IRFKQ', '41231');
+INSERT INTO pizza (topping_type) VALUES ('meat');
+INSERT INTO pizza_order (order_type, order_date, quantity) VALUES ('dinein', '2020-01-30', '33');
+
+INSERT INTO customer (First_Name, Last_Name, Address, ZIP) VALUES ('CRHPC', 'HGOHE', 'ADDUK', '71717');
+INSERT INTO pizza (topping_type) VALUES ('meat');
+INSERT INTO pizza_order (order_type, order_date, quantity) VALUES ('delivery', '2020-07-29', '9');
+
+INSERT INTO customer (First_Name, Last_Name, Address, ZIP) VALUES ('VPOTI', 'FIUKC', 'QUQDN', '26795');
+INSERT INTO pizza (topping_type) VALUES ('meat');
+INSERT INTO pizza_order (order_type, order_date, quantity) VALUES ('delivery', '2020-02-15', '17');
+
